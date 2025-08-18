@@ -1424,6 +1424,7 @@ h4, .h4 {
   display: flex;
   flex-direction: column;
   row-gap: 48px;
+  padding-bottom: 30px;
 }
 @media (max-width: 767px) {
   .review-card {
@@ -1488,7 +1489,7 @@ h4, .h4 {
   translate: -50% -50%;
   height: calc(100% - var(--contactIsImageOffsetY) * 2);
   aspect-ratio: 1;
-  background: url("../../images/contact-us-bg.svg") center/contain no-repeat;
+  background: url("./../images/contact-us-bg.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .contact-us::after {
