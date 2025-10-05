@@ -1,18 +1,21 @@
+@import '../mixins', '../media';
+
 .radio {
   display: flex;
   align-items: center;
   column-gap: 14px;
   transition-duration: var(--transition-duration);
-  @include hover{
+  @include hover {
     opacity: 0.6;
   }
 
-  &__input{
-    &:not(:checked) + .radio__emulator::after{
+  &__input {
+    &:not(:checked) + .radio__emulator::after {
       opacity: 0;
     }
 
   }
+
   &__emulator {
     @include flex-center;
     @include square(28px);
@@ -22,7 +25,7 @@
     border: var(--border);
     border-radius: 50%;
 
-    &::after{
+    &::after {
       @include abs-center;
       @include square(60%);
 

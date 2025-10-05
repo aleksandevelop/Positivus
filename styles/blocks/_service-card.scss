@@ -9,7 +9,7 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
-  @include mobile{
+  @include mobile {
     display: grid;
     grid-template-columns: auto auto;
     row-gap: 27px;
@@ -29,7 +29,7 @@
     justify-content: space-between;
     row-gap: 30px;
 
-    @include mobile{
+    @include mobile {
       display: contents;
 
     }
@@ -37,12 +37,12 @@
 
   &__image {
     align-self: center;
-    @include desktop{
+    @include desktop {
       max-width: 50%;
       height: auto;
     }
 
-    @include mobile{
+    @include mobile {
       max-width: 165px;
     }
   }
@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    @include mobile{
+    @include mobile {
       grid-column: -1 / 1;
     }
   }
@@ -63,7 +63,7 @@
     column-gap: 15px;
     font-size: 20px;
 
-    @include mobile{
+    @include mobile {
       align-self: end;
     }
 
@@ -88,8 +88,8 @@
       }
     }
 
-    &-label{
-      @include  mobile{
+    &-label {
+      @include mobile {
         @include visually-hidden;
       }
     }

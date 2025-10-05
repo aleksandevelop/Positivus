@@ -1,4 +1,4 @@
-.team-card{
+.team-card {
 
   padding: 40px 35px;
   height: 100%;
@@ -6,25 +6,29 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
-  @include mobile{
+  @include mobile {
     padding-inline: 50px;
   }
-  &__header{
+
+  &__header {
     display: flex;
   }
-  &__image{
-    &:not(:last-child){
+
+  &__image {
+    &:not(:last-child) {
       margin-right: 20px;
     }
   }
-  &__info{
+
+  &__info {
     align-self: end;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 10px;
     }
   }
-  &__link{
+
+  &__link {
     @include flex-center;
     @include square(34px);
     flex-shrink: 0;
@@ -35,20 +39,21 @@
     background-color: var(--color-dark);
 
   }
-  &__name{
-    &:not(:last-child){
+
+  &__name {
+    &:not(:last-child) {
       margin-bottom: 3px;
     }
   }
 
-  &__body{
+  &__body {
     --teamCardBodyMarginTop: 28px;
 
     margin-top: var(--teamCardBodyMarginTop);
     padding-top: var(--teamCardBodyMarginTop);
     border-top: var(--border);
 
-    @include mobile{
+    @include mobile {
       --teamCardBodyMarginTop: 20px;
 
     }

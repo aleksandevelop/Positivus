@@ -1,11 +1,11 @@
-.subscribe-form{
+.subscribe-form {
   display: flex;
   column-gap: 20px;
-  padding: 58px 40px ;
+  padding: 58px 40px;
   background-color: var(--color-dark-alt);
   border-radius: var(--border-radius);
 
-  @include desktop{
+  @include desktop {
     flex-direction: column;
     row-gap: 22px;
     width: 100%;

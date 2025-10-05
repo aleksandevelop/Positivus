@@ -1,20 +1,24 @@
-.pagination{
-  &__list{
+.pagination {
+  &__list {
     display: flex;
 
+    column-gap: 3px;
 
   }
-  &__button{
+
+  &__button {
     @include reset-button;
     @include flex-center;
-    @include square(24px);
+    @include square(14px);
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+    transition-duration: var(--transition-duration);
 
     color: var(--color-light);
-    @include hover{
-      color: var(--color-accent);
-    }
-    &.is-current{
-      color: var(--color-accent);
+
+    &.is-current {
+      background-color: var(--color-accent);
     }
   }
 }

@@ -1,16 +1,17 @@
 .footer {
-  @include mobile{
+  @include mobile {
     padding-inline: 0;
   }
+
   &__inner {
     padding: 55px 60px 50px;
     color: var(--color-light);
     background-color: var(--color-dark);
 
-    @include mobile-above{
+    @include mobile-above {
       border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
     }
-    @include mobile{
+    @include mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,64 +21,68 @@
 
   }
 
-  &__navigation{
+  &__navigation {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
     align-items: center;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 66px;
     }
-    @include tablet{
+
+    @include tablet {
       flex-direction: column;
       align-items: center;
       row-gap: 37px;
     }
-    @include mobile{
+    @include mobile {
       display: contents;
     }
   }
-  &__menu{
-    &-list{
+
+  &__menu {
+    &-list {
       display: flex;
       align-items: center;
       column-gap: 40px;
-      @include mobile{
-        gap: 15px ;
+      @include mobile {
+        gap: 15px;
         flex-wrap: wrap;
       }
     }
-    &-link{
+
+    &-link {
       display: inline-flex;
       align-items: center;
       height: 30px;
       text-decoration: underline;
 
-      @include hover{
+      @include hover {
         color: var(--color-accent);
       }
     }
   }
 
-  &__sic1als{
-    @include mobile{
+  &__sic1als {
+    @include mobile {
       order: 1;
     }
   }
-  &__body{
+
+  &__body {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
 
-    @include mobile-above{
-      &:not(:last-child){
+    @include mobile-above {
+      &:not(:last-child) {
         margin-bottom: 50px;
         padding-bottom: 50px;
         border-bottom: 1px solid currentColor;
       }
     }
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: center;
       row-gap: inherit;
@@ -85,37 +90,41 @@
     }
 
   }
-  &__contacts{
+
+  &__contacts {
     display: flex;
     flex-direction: column;
     align-items: start;
     row-gap: 27px;
 
-    @include mobile{
+    @include mobile {
       align-items: center;
       text-align: center;
     }
 
-    &-title{
+    &-title {
       color: var(--color-dark);
     }
-    &-body{
+
+    &-body {
       font-style: normal;
 
-      p{
+      p {
         --paragraphMarginBottom: 20px;
       }
-      a{
-        @include hover{
+
+      a {
+        @include hover {
           color: var(--color-accent);
         }
       }
     }
   }
-  &__extra{
+
+  &__extra {
     display: flex;
     column-gap: 40px;
-    @include mobile{
+    @include mobile {
       order: 2;
       flex-direction: column;
       align-items: center;
@@ -125,10 +134,11 @@
       border-top: 1px solid currentColor;
     }
   }
-  &__privacy-policy-link{
+
+  &__privacy-policy-link {
     text-decoration: underline;
 
-    @include hover{
+    @include hover {
       color: var(--color-accent);
     }
   }

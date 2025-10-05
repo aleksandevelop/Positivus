@@ -1,26 +1,28 @@
-.process{
-  &__list{
+.process {
+  width: 100%;
+
+  &__list {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-
     counter-reset: custom-counter;
     list-style: none;
 
-    @include mobile{
+    @include mobile {
       row-gap: 20px;
     }
   }
-  &__item{
+
+  &__item {
     --counterContent: counter(custom-counter);
     counter-increment: custom-counter;
 
-    &:nth-child(-n + 9){
+    &:nth-child(-n + 9) {
       --counterContent: '0' counter(custom-counter);
     }
   }
 
-  &__accordion{
+  &__accordion {
     --indicatorVerticalRotate: 90deg;
 
     padding: 40px 60px;
@@ -28,24 +30,24 @@
     border: var(--border);
     border-radius: var(--border-radius-large);
     box-shadow: var(--shadow);
-    transition-duration: 0.7s;
 
-    @include hover{
+    @include hover {
       background-color: var(--color-accent);
 
     }
 
 
-    @include mobile{
+    @include mobile {
       padding: 30px;
     }
-    &[open]{
+
+    &[open] {
       background-color: var(--color-accent);
 
       --indicatorVerticalRotate: 0;
     }
 
-    &-header{
+    &-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -53,29 +55,32 @@
       cursor: pointer;
       user-select: none;
 
-      @include mobile{
+      @include mobile {
         column-gap: 28px;
       }
     }
-    &-title{
+
+    &-title {
 
       @include fluid-text(30, 18);
       display: flex;
       align-items: center;
       column-gap: 25px;
-      @include mobile{
+      @include mobile {
         column-gap: 33px;
       }
-      &::before{
+
+      &::before {
         content: var(--counterContent);
         font-size: 2em;
 
-        @include mobile{
+        @include mobile {
           font-size: 30px;
         }
       }
     }
-    &-indicator{
+
+    &-indicator {
       @include flex-center;
       @include square(58px);
 
@@ -85,12 +90,12 @@
       border: var(--border);
       border-radius: 50%;
 
-      @include mobile{
+      @include mobile {
         width: 30px;
       }
 
       &::before,
-      &::after{
+      &::after {
         @include abs-center;
 
         content: '';
@@ -98,17 +103,17 @@
         height: 10%;
         background-color: var(--color-dark);
       }
-      &::after{
+
+      &::after {
         rotate: var(--indicatorVerticalRotate);
         transition-duration: var(--transition-duration);
       }
     }
 
-    &-body{
+    &-body {
       margin-top: 30px;
       padding-top: 30px;
       border-top: var(--border);
-      transition-duration: 0.7s;
     }
   }
 }
